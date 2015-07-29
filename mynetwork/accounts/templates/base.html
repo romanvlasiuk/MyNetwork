@@ -44,7 +44,7 @@
 					<center><img src="{{ profile.photo.url }}"/></center>
 					<p><strong><center>{{ user.username }}</center></strong></p>
 					{% if user != root %}
-					<a href="/messages/add_message/?id={{ user.id }}"><center><button class="btn btn-inverse">Написать автору</button></center></a>
+					<a href="/messages/new/?id={{ user.id }}"><center><button class="btn btn-inverse">Написать автору</button></center></a>
 					{% endif %}
 					<p>Публикаций:    {{ amount }}   </p>
 					<p>Имя:           {{ user.first_name  }}</p>

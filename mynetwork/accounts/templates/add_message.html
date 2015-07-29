@@ -5,7 +5,7 @@
 {% block content %}
 <div class="span6" >
     <legend>Новое сообщение</legend>
-        <form method="post" action="/messages/add_message/">
+        <form method="post" action="/messages/new/">
             {% csrf_token %}
             <label>Тема:</label>
             {{ form.title }}

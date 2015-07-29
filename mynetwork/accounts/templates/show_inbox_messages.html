@@ -18,7 +18,7 @@
                 <tr>
                     <td>{{ message.time }}</td>
                     <td><strong><a href="/main/author/?id={{ message.user1.id }}">{{ message.user1 }}</a></strong></td>
-                    <td><a href="/messages/show_message/?id={{ message.id }}&button=1">{{ message.title }}</a></td>
+                    <td><a href="/messages/message/?id={{ message.id }}&button=1">{{ message.title }}</a></td>
                 </tr>
             {% endfor %}
         </tbody>

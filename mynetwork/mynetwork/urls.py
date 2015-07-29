@@ -25,7 +25,6 @@ urlpatterns = [
     url(r'^accounts', include('accounts.urls')),
     url(r'^main', include('main.urls')),
     url(r'^messages', include('message_system.urls')),
-
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += staticfiles_urlpatterns()
