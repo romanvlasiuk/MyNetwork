@@ -9,6 +9,9 @@ class Message(models.Model):
     text = models.TextField()
     time = models.DateTimeField()
 
+    def __unicode__(self):
+        return '{0} to {1}'.format(self.user1, self.user2)
+
 User.get_messages = property(lambda u: list(Message.objects.filter(user2=u)))
 User.sent_messages = property(lambda u: list(Message.objects.filter(user1=u)))
 User.inbox = property(lambda u: len(list(Message.objects.filter(user2=u))))
