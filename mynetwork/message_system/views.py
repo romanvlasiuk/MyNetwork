@@ -33,10 +33,8 @@ def new_message(request):
 
 def show_message(request):
     id = request.GET['id']
-    print id
     show_button = request.GET['button']
     message = Message.objects.get(id=id)
-    print message
     request.session['current_user'] = message.user1.id
     return render(request, 'show_message.html', content_creator(request, request.user,
                                                                 message=message, show_button=show_button))
