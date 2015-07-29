@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Сообщения{% endblock %}
+
+{% block content %}
+<div class="span6" >
+    <h3>{{ message.title }}</h3>
+    <p>{{ message.user1 }} : {{ message.time }}</p>
+    <text>{{ message.text }}</text>
+    <p></p>
+    {% if show_button != '0' %}
+        <a href="/messages/add_message/"><center><button class="btn btn-inverse">Ответить</button></center></a>
+    {% endif %}
+</div>
+
+{% endblock %}

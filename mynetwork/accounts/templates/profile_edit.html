@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Редактирование профиля{% endblock %}
+
+{% block content %}
+<div class="span6" >
+    <legend>Редактирование профиля</legend>
+    <p>{{ user.username }} :</p>
+    <form method="post" action="/accounts/edit_profile/" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p></p>
+        <button type="submit" class="btn btn-block btn-inverse">Редактировать</button>
+    </form>
+</div>
+{% endblock %}
+
+
+
+
+

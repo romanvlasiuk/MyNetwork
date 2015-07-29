@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+		<meta charset="UTF-8"/>
+		<title>authorization</title>
+		<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+		<style>
+		.well{
+		margin-top:120px;		
+		}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="well span4 offset4" >
+					<legend>Авторизация</legend>
+					<form method="post" action="/">
+                        {% csrf_token %}
+                        <label>Username</label>
+						{{ form.username }}
+                        <label>Password</label>
+						{{ form.password }}
+						<label class="checkbox">
+							<input type="checkbox" name="remember">Запомнить меня				
+						</label>
+						<button type="submit" class="btn btn-block btn-inverse">Войти</button>
+                        <input type="hidden" name="next" value="/main/"/>
+						<p><a href="/accounts/registration/">registration</a></p>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="/static/js/bootstrap.min.js"></script>
+	</body>
+</html>

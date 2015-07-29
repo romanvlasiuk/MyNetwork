@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Редактирование профиля{% endblock %}
+
+{% block content %}
+<div class="span6">
+	{% if user.photos %}
+		{% for photo in user.photos %}
+			<a href="{{ photo.image.url }}"><img class="photo" src="{{ photo.image.url }}"/></a>
+		{% endfor %}
+	{% endif %}
+	<p></p>
+	<a href="/main/add_photo/"><button class="btn btn-block btn-inverse">Добавить фото</button></a>
+</div>
+{% endblock %}

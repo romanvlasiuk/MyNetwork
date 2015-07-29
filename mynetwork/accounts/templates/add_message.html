@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Новый комментарий{% endblock %}
+
+{% block content %}
+<div class="span6" >
+    <legend>Новое сообщение</legend>
+        <form method="post" action="/messages/add_message/">
+            {% csrf_token %}
+            <label>Тема:</label>
+            {{ form.title }}
+            <label>Введите текст сообщения: </label>
+            {{ form.text }}
+            <button type="submit" class="btn btn-block btn-inverse">Отправить</button>
+        </form>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Новая публикация{% endblock %}
+
+{% block content %}
+<div class="span6" >
+    <legend>Новая публикация</legend>
+    <form method="post" action="/main/add_pub/">
+        {% csrf_token %}
+        <label>Название</label>
+        {{ form.article }}
+        <label>Текст</label>
+        {{ form.text }}
+        <button type="submit" class="btn btn-block btn-inverse">Добавить</button>
+    </form>
+</div>
+{% endblock %}

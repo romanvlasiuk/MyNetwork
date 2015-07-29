@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<div class="span6">
+	{% if user.publications %}
+		<h3>{{ curent_publication.article }}</h3>
+		<text>
+			{{ curent_publication.text }}
+		</text>
+	{% endif %}
+	<a href="/main/add_comment/"><center><button class="btn btn-inverse">Добавить комментарий</button></center></a>
+	<h4>Коментарии:</h4>
+	{% for comment in curent_publication.comments %}
+		<strong>{{ comment.author.username }}</strong>({{ comment.time }}) :<br/>
+		<text><em>{{ comment.text }}</em></text>
+		<p></p>
+	{% endfor %}
+</div>
+{% endblock %}

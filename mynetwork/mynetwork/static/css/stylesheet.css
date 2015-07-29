@@ -1,0 +1,41 @@
+img{
+height: 150px;
+width: 150px;
+border-radius: 100%;
+}
+.Pub{
+color: black;
+text-decoration; none;
+}
+.Pub:hover{
+font-weight: bold ;
+}
+td img{
+height: 30px;
+width: 30px;
+}
+#footer{
+background-color: #363636;
+background-repeat: repeat-x;
+border-color: #252525;
+color: white;
+padding:5px;
+text-align: center;
+border-radius:4px;
+}
+body{
+background: url(/static/img/fon.png);
+}
+.photo{
+display: inline-block;
+border-radius: 10%;
+border: 3px solid grey;
+width: 100px;
+height: 100px;
+margin-top: 5px;
+
+}
+.Logs{
+color: black;
+text-decoratoin: none;
+}
